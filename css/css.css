@@ -520,7 +520,7 @@ input[type=submit]:hover {
   background: brown; 
   height: 2px; 
   border-radius: 1px; 
-  width: 0%; 
+  width: 100%; 
   position: fixed; 
   top: 0;
   left: 0; 

@@ -19,9 +19,10 @@
         
     </head>
 
-  <body onload="myFunction()">
-    <div id="loader" class="center"></div> 
-    
+  <body >
+      <div id="loader">
+
+      </div>
       <video autoplay muted loop id="home-bg-video">
         <source src="assets/backvideo.mp4" type="video/mp4">
       </video>
@@ -592,13 +593,13 @@
                   <p>mustafahadid40@gmail.com</p>
                 </div>
                 <div class="inputcontact">
-                  <form action="action_page.php">
+                  <form  id="myform" method="post" action="contact.php">
 
-                    <input type="text" id="fname" name="firstname" maxlength="50" placeholder="Your name.." required>
+                    <input type="text" id="Name" name="Name" maxlength="50" placeholder="Your name.." required>
                 
-                    <input type="email" id="lname" name="email" maxlength="50" placeholder="Your email.." required>
+                    <input type="email" id="Email" name="Email" maxlength="50" placeholder="Your email.." required>
                 
-                    <textarea id="subject" name="subject" maxlength="500" minlength="2" placeholder="Your message.." style="height:100px"></textarea>
+                    <textarea id="Message" name="Message" maxlength="500" minlength="2" placeholder="Your message.." style="height:100px"></textarea>
                 
                     <input type="submit" value="Submit">
                 
@@ -617,21 +618,8 @@
             </footer>
           
         <!-- Footer-->
-          <script>
-              document.onreadystatechange = function() { 
-              if (document.readyState !== "complete") { 
-                  document.querySelector( 
-                    "body").style.visibility = "hidden"; 
-                  document.querySelector( 
-                    "#loader").style.visibility = "visible"; 
-              } else { 
-                  document.querySelector( 
-                    "#loader").style.display = "none"; 
-                  document.querySelector( 
-                    "body").style.visibility = "visible"; 
-              } 
-          }; 
-          </script>
+        <script src="js/overflow.js"></script>
+        <script src="js/loader.js"></script>
         <script src="js/nav-progress.js"></script>
         <script src="js/scroll.js"></script>
         <script src="js/typer.js"></script>

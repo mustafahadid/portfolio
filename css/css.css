@@ -1,0 +1,535 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body{
+  font-family: 'Roboto', sans-serif;
+ 
+}
+body::-webkit-scrollbar {
+  width: 0px;               
+}
+#loader{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: black url("../assets/gif.gif") no-repeat center;
+  z-index: 99999;
+  
+}
+#home-bg-video{
+  position: fixed;
+  top: 50%;
+  left:50%;
+  transform: translatex(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+#home-overlay{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left:0;
+ 
+}
+
+#home-content{
+  width: 100%;
+  height: 100%;
+  display: table;
+  margin-top: 230px;
+}
+#home-content-inner{
+  display: table-cell;
+  vertical-align: middle;
+}
+#home-heading h3{
+  color: #f4c613;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+  padding-bottom: 20px;
+}
+#home-heading h1{
+  background-color: #f4c613;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-left: 0;
+ 
+  font-family: 'Roboto Condensed', sans-serif;
+  display: inline-block;
+  padding: 20px;
+}
+#home-text p{
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin: 5px 0 30px 0;
+  display: inline-block;
+  padding: 5px;
+  font-family: 'Press Start 2P', cursive;;
+}
+/* typing */
+.typing{
+  position: absolute;
+  margin-left: 800px;
+  
+}
+.typing::after{
+  content: " ";
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  border-right: 2px solid white;
+  animation: blink 0.4s infinite ease;
+  
+}
+@keyframes blink{
+  0%{
+    opacity: 0;
+  }
+  100%{
+      opacity: 1;
+     
+  }
+}
+
+
+/* social icons */
+
+.social-link{
+  color: white;
+  text-decoration: none;
+}
+.social{
+  position: absolute;
+  top: 100px;
+  right: 20px;
+}
+.social ul{
+  padding: 0px;
+  
+}
+.social ul li{
+  display: block;
+  margin: 5px;
+  
+  width: 50px;
+  text-align: right;
+  padding: 30px;
+  
+}
+
+/* navbar */
+
+#container-nav{
+  margin-top: 250px;
+  position: sticky;
+  width: 100%;
+  overflow: sticky;
+  z-index: 21;
+}
+.navbar-brand{
+  margin-left: 10PX;
+  font-size: 3vw;
+  font-weight: 500;
+  font-family: 'Dancing Script', cursive;;
+}
+.nav-item{
+  margin-right: 80PX;
+}
+.topnav a:hover {
+  border-bottom: 3px solid red;
+}
+
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/* section about me */
+#about-me-section{
+  position: unset;
+  background-color: rgba(89, 89, 94, 0.4);
+  height: 100%;
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  
+}
+#about-me-content{
+  background-color: 	rgb(26, 26, 26);
+  margin: 5%;
+  display: flex;
+  flex-direction: row;
+  padding: 5%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about-me-text{ 
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  line-height: 2.0rem;
+  padding-left: 5%;
+  
+}
+#about-me-text h1{
+  color:  #ffc107;
+  font-size: 3vw;
+  padding: 5%;
+}
+#about-me-text p{
+  color: white;
+  justify-content: left;
+  text-align: justify;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  padding: 5%;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+#about-me-photo{
+  background-color: #ffc107;
+  padding: 1%;
+  
+}
+
+@media only screen and (max-width: 700px){
+  #about-me-content{
+    
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  #about-me-text p{
+   
+    text-align: justify;
+    border: 1px solid white;
+    padding: 5%;
+    font-size: 1.3vm;
+    font-family: 'Roboto', sans-serif;
+  }
+  #about-me-text h1{
+    text-align: center;
+  }
+  #about-me-photo{
+    margin-left: 15%;
+  }}
+
+  
+.background-image{
+    margin-top: 200px;
+    background-image:url("../assets/myskillpic.jpg");
+    background-repeat:no-repeat;
+    background-size:contain;
+
+}
+  
+.responsiveproject{
+  width: 100%;
+  height: auto;
+  
+}
+
+/* slider */
+#project-slide-show{
+  position: relative;
+  background-color:  rgba(89, 89, 94, 0.4);
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.slide-caption{
+  text-align: center;
+  padding: 1%;
+  color: #f4c613;
+  font-size: 1.5vw;
+  padding-bottom: 15px;
+}
+.carousel-control-prev-icon{
+  background-color: red;
+}
+.carousel-control-next-icon{
+  background-color: red;
+}
+
+/* my skill section */
+
+
+.skill-container{
+
+  background-color:	rgba(26, 26, 26, 0.9);
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 2%;  
+ 
+}
+.headerskill{
+  text-align: center;
+  color: #eee;
+  padding: 3%;
+
+}
+.headerskill small{
+  padding: 5%;
+}
+.skill-content{
+  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.skill-content div{
+  text-align: center;
+  padding: 2px;
+  display: inline-block;
+  align-items: center;
+  width: 370px;
+}
+.skill-content div img{
+  width: 200px;
+  height: 200px;
+  margin-left: 16%;
+}
+.skill-content div h4{
+  margin-left: 16%;
+  color:#f4c613;
+}
+.skill-content div li{
+  list-style: none;
+  position: relative;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 50px 0;
+  color: white;
+}
+.skill-content div li::before{
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(222, 224, 226, 0.5);
+  border-radius: 1000px;
+}
+.skill-content div li::after{
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 0;
+  height: 8px;
+  background-color: #f4c613;
+  border-radius: 1000px;
+  animation-duration: -7s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+li.html::after{
+  animation: html;
+}
+@keyframes html{
+  to {
+    width: 100%;
+  }
+}
+li.javascript::after{
+  animation: javascript;
+}
+@keyframes javascript{
+  to {
+    width: 40%;
+  }
+}
+li.flask::after{
+  animation: flask;
+}
+@keyframes flask{
+  to {
+    width: 90%;
+  }
+}
+li.database::after{
+  animation: database;
+}
+@keyframes database{
+  to {
+    width: 90%;
+  }
+}
+li.python::after{
+  animation: python;
+}
+@keyframes python{
+  to {
+    width: 75%;
+  }
+}
+li.c::after{
+  animation: c;
+}
+@keyframes c{
+  to {
+    width: 80%;
+  }
+}
+li.vb::after{
+  animation: vb;
+}
+@keyframes vb{
+  to {
+    width: 60%;
+  }
+}
+li.sql::after{
+  animation: sql;
+}
+@keyframes sql{
+  to {
+    width: 95%;
+  }
+}
+li.cloud::after{
+  animation: cloud;
+}
+@keyframes cloud{
+  to {
+    width: 70%;
+  }
+}
+li.photoshop::after{
+  animation: photoshop;
+}
+@keyframes photoshop{
+  to {
+    width: 80%;
+  }
+}
+li.git::after{
+  animation: git;
+}
+@keyframes git{
+  to {
+    width: 88%;
+  }
+}
+li.linux::after{
+  animation: linux;
+}
+@keyframes linux{
+  to {
+    width: 40%;
+  }
+}
+
+
+.contact-container{
+  background-color: black;
+}
+.uper-text{
+  display: inline;
+  text-align: center;
+  padding: 20px;
+}
+.uper-text h1{
+  color: #f4c613;
+}
+.uper-text h2{
+  color: white;
+}
+.uper-text{
+  color: gray;
+}
+.inputcontact{
+  background-color: rgba(26, 26, 26, .5);
+  padding-left: 5%;
+  padding-right: 5%;
+  align-content: center;
+  margin-left: 20%;
+  margin-right: 20%;
+
+  padding-top: 2%;
+  padding-bottom: 2%;
+  
+}
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  margin-top: 15px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical;/* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: rgba(26, 26, 26, .5);
+  border: none;
+  color: white;
+}
+
+input[type=email], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  margin-top: 15px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: rgba(26, 26, 26, .5);
+  border: none;
+  color: white;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #f4c613;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+textarea {
+  resize: none;
+}
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #f4c613;
+}
+#footer{
+  padding: 10px;
+  text-align: center;
+  color:gray;
+  background-color: black;
+}
+
+/* progress line*/
+.text { 
+  font-size: 80px; 
+  color: brown; 
+  text-align: center; 
+  line-height: 3em;
+  left: 0; 
+} 
+
+.line { 
+  background: brown; 
+  height: 2px; 
+  border-radius: 1px; 
+  width: 0%; 
+  position: fixed; 
+  top: 0;
+  left: 0; 
+} 
+
+
+
+/* bricks
+
+*/
+
+

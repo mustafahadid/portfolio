@@ -7,6 +7,8 @@ body{
 body::-webkit-scrollbar {
   width: 0px;               
 }
+
+
 #loader{
   position: fixed;
   height: 100vh;
@@ -195,22 +197,11 @@ display: inline-block;
   .about-me-left {
    text-align: center;
   }
-
+  .background-image{
+    background-image: none;
+  }
 }
 
-.background-image{
-    margin-top: 200px;
-    background-image:url("../assets/myskillpic.jpg");
-    background-repeat:no-repeat;
-    background-size:contain;
-
-}
-  
-.responsiveproject{
-  width: 100%;
-  height: auto;
-  
-}
 
 /* slider */
 #project-slide-show{
@@ -235,15 +226,14 @@ display: inline-block;
 }
 
 /* my skill section */
-.skill-container{
-  background-color:	rgba(26, 26, 26, 0.9);
-  margin-left: 5%; 
-  margin-right: 5%;
-}
+
 .headerskill{
+  background-color:	rgba(26, 26, 26, 0.9);
   text-align: center;
   color: #eee;
   padding: 3%;
+  margin-left: 5%; 
+  margin-right: 5%;
 }
 .headerskill small{
   padding: 5%;
@@ -253,7 +243,7 @@ display: inline-block;
   width: 100%;
   margin-right: 5%;
   margin-left: 5%;
-  margin-bottom: 700px;
+  margin-bottom: 0;
 }
 
 .left {
@@ -310,10 +300,10 @@ display: inline-block;
   .skill-content{
     background-color:	rgba(26, 26, 26, 0.9);
     width: 100%;
+    height: 100%;
     margin: 0;
   }
-  .skill-container{
-    background-color:	rgba(26, 26, 26, 0.9);
+  .headerskill{
     width: 100%;
     margin: 0;
   }
@@ -525,5 +515,24 @@ input[type=submit]:hover {
   left: 0; 
 } 
 
+.background-image{
+  margin-top: 200px;
+  background-image:url("../assets/myskillpic.jpg");
+  background-repeat:no-repeat;
+  background-size:contain;
+}
 
+.responsiveproject{
+width: 100%;
+height: auto;
 
+}
+#myskills{
+  margin-bottom: 900px;
+}
+
+@media screen and (max-width:800px){
+  #myskills{
+  min-height: 1600px;
+
+}}

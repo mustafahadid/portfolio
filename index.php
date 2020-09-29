@@ -683,7 +683,7 @@
                   <p>mustafahadid40@gmail.com</p>
                 </div>
                 <div class="inputcontact">
-                  <form  id="myform" method="POST" action="contact.php" >
+                  <form  id="myform" method="POST" action=" " >
 
                     <input type="text" id="name" name="name" maxlength="50" placeholder="Your name.." required>
                 

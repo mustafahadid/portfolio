@@ -1,17 +1,11 @@
-<?php
-
-    $name=$_REQUEST['name'];
-    $email=$_REQUEST['email'];
-    $message=$_REQUEST['message'];
-    if (($name=="")||($email=="")||($message==""))
-        {
-        echo "All fields are required, please fill <a href=\"\">the form</a> again.";
-        }
-    else{        
-        $from="From: $name<$email>\r\nReturn-path: $email";
-        $subject="Message sent using your contact form";
-        mail("mustafahadid40@gmail.com", $subject, $message, $from);
-        echo "Email sent!";
-        }
-    
+<?php 
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+$formcontent="From: $name \n Message: $message";
+$recipient = "mustafahadid40@gmail.com";
+$subject = "Contact Form";
+$mailheader = "From: $email \r\n";
+mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+echo "Thank You!";
 ?>

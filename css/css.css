@@ -2,7 +2,7 @@
 
 body{
   font-family: 'Roboto', sans-serif;
- 
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   width: 0px;               
@@ -158,74 +158,46 @@ body::-webkit-scrollbar {
 
 /* section about me */
 #about-me-section{
-  position: unset;
-  background-color: rgba(89, 89, 94, 0.4);
-  height: 100%;
-  width: 100%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  
+  margin-top: 100px;
+  margin-bottom: 200px;
 }
-#about-me-content{
-  background-color: 	rgb(26, 26, 26);
-  margin: 5%;
-  display: flex;
-  flex-direction: row;
-  padding: 5%;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
+.about-me-content{
+padding: 5%;
+margin-left: 10%;
+margin-right: 10%;
+background-color: rgba(26, 26, 26, 0.9);
+display: inline-block;
+
+}
+.about-me-left {
+  padding:30px;
+  float:left;
+  width:60%; /* The width is 20%, by default */
 }
 
-#about-me-text{ 
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
-
-  line-height: 2.0rem;
-  padding-left: 5%;
-  
+.about-me-right{
+  padding:20px;
+  float:left;
+  width:40%; /* The width is 60%, by default */
 }
-#about-me-text h1{
-  color:  #ffc107;
-  font-size: 3vw;
-  padding: 5%;
+.about-me-left h1{
+  color: #f4c613;
+  font-weight: 600;
 }
-#about-me-text p{
-  color: white;
-  justify-content: left;
-  text-align: justify;
-  border-bottom: 1px solid white;
-  border-right: 1px solid white;
-  padding: 5%;
-  font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
+.about-me-left p{
+  color: #eee;
+  opacity: 70%;
 }
-#about-me-photo{
-  background-color: #ffc107;
-  padding: 1%;
-  
-}
-
-@media only screen and (max-width: 700px){
-  #about-me-content{
-    
-    display: flex;
-    flex-wrap: wrap;
-
+@media screen and (max-width:800px) {
+  .about-me-left, .about-me-right {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
   }
-  #about-me-text p{
-   
-    text-align: justify;
-    border: 1px solid white;
-    padding: 5%;
-    font-size: 1.3vm;
-    font-family: 'Roboto', sans-serif;
+  .about-me-left {
+   text-align: center;
   }
-  #about-me-text h1{
-    text-align: center;
-  }
-  #about-me-photo{
-    margin-left: 15%;
-  }}
 
-  
+}
+
 .background-image{
     margin-top: 200px;
     background-image:url("../assets/myskillpic.jpg");
@@ -263,46 +235,64 @@ body::-webkit-scrollbar {
 }
 
 /* my skill section */
-
-
 .skill-container{
-
   background-color:	rgba(26, 26, 26, 0.9);
+  margin-left: 5%; 
   margin-right: 5%;
-  margin-left: 5%;
-  padding: 2%;  
- 
 }
 .headerskill{
   text-align: center;
   color: #eee;
   padding: 3%;
-
 }
 .headerskill small{
   padding: 5%;
 }
 .skill-content{
-  
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  background-color:	rgba(26, 26, 26, 0.9);
+  width: 100%;
+  margin-right: 5%;
+  margin-left: 5%;
 }
-.skill-content div{
+
+.left {
   text-align: center;
-  padding: 2px;
-  display: inline-block;
-  align-items: center;
-  width: 370px;
+  background-color:	rgba(26, 26, 26, 0.9);
+  padding: 20px;
+  float:left;
+  width:30%; /* The width is 20%, by default */
 }
+
+.main {
+  text-align: center;
+  background-color:	rgba(26, 26, 26, 0.9);
+  padding: 20px;
+  float:left;
+  width:30%; /* The width is 60%, by default */
+}
+
+.right {
+  text-align: center;
+  background-color:	rgba(26, 26, 26, 0.9);
+  padding: 20px;
+  float:left;
+  width:30%; /* The width is 20%, by default */
+}
+
+/* Use a media query to add a break point at 800px: */
+
+
 .skill-content div img{
   width: 200px;
   height: 200px;
-  margin-left: 16%;
 }
 .skill-content div h4{
   margin-left: 16%;
   color:#f4c613;
+  margin-left: 4%;
+}
+.skill-content div ul{
+  margin-right: 10%;
 }
 .skill-content div li{
   list-style: none;
@@ -311,6 +301,21 @@ body::-webkit-scrollbar {
   text-transform: uppercase;
   margin: 50px 0;
   color: white;
+}
+@media screen and (max-width:800px) {
+  .left, .main, .right {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .skill-content{
+    background-color:	rgba(26, 26, 26, 0.9);
+    width: 100%;
+    margin: 0;
+  }
+  .skill-container{
+    background-color:	rgba(26, 26, 26, 0.9);
+    width: 100%;
+    margin: 0;
+  }
 }
 .skill-content div li::before{
   content: "";
@@ -501,10 +506,11 @@ input[type=submit]:hover {
   background-color: #f4c613;
 }
 #footer{
-  padding: 10px;
+  padding-top: 100px;
   text-align: center;
   color:gray;
   background-color: black;
+  height: 200px;
 }
 
 /* progress line*/

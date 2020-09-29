@@ -253,7 +253,7 @@ display: inline-block;
   width: 100%;
   margin-right: 5%;
   margin-left: 5%;
-  margin-bottom: 600px;
+  margin-bottom: 700px;
 }
 
 .left {
@@ -515,13 +515,6 @@ input[type=submit]:hover {
 }
 
 /* progress line*/
-.text { 
-  font-size: 80px; 
-  
-  text-align: center; 
-  line-height: 3em;
-  left: 0; 
-} 
 .line { 
   background: brown; 
   height: 2px; 
@@ -532,10 +525,5 @@ input[type=submit]:hover {
   left: 0; 
 } 
 
-
-
-/* bricks
-
-*/
 
 
